@@ -1,7 +1,7 @@
 from os import path
 
 from parse import parseCriteria, parseLexicographicOrder, parseClassOrder
-from render import renderBinaryMatrixes
+from render import renderBinaryMatrixes, renderGraph
 from helpers import arrayToStr, increaseEach
 
 from pareto import getParetoRelation
@@ -56,5 +56,8 @@ def lab3():
         print(arrayToStr(maxByP, 'X0P = '))
         print(arrayToStr(maxByR, 'X0R = '))
         print(arrayToStr(stronglyMaxByR, 'X00R = '))
+
+        outDir = baseFilePath + '/../output/lab3/matrix-' + str(index + 1) + '/'
+        renderGraph(matrix, outDir + 'graph.gv')
 
 lab3()

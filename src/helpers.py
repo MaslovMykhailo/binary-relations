@@ -7,3 +7,7 @@ def increaseEach(array):
 def arrayToStr(array, prefix = '', postfix = ''):
     separator = ', '
     return prefix + '{' + separator.join(map(str, array)) +  '}' + postfix
+    
+def intToStr(n):
+    return ' ' + str(n) + ' ';
+    

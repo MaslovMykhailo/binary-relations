@@ -9,3 +9,4 @@ def getBottomSection(matrix, index):
     for i in range(len(matrix[index])):
         if matrix[index][i] == 1: section.append(i)
     return section
+    

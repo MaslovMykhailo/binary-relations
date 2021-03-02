@@ -17,3 +17,4 @@ def isAcyclic(matrix):
         if hasCycle(matrix, index, index):
             return False
     return True
+    

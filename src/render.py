@@ -1,4 +1,5 @@
 from graphviz import Digraph
+from helpers import intToStr
 
 def renderGraph(matrix, filename): 
     digraph = Digraph(filename)
@@ -19,4 +20,12 @@ def renderMatrix(matrix, filename):
     for line in matrix:
         file.write('| ' + ' | '.join(line) + ' |\n'); 
         file.write('|---' * len(line) + '|\n')
+    file.close()
+
+def renderBinaryMatrixes(matrixes, filename):
+    file = open(filename, 'w+')
+    for i in range(len(matrixes)):
+        file.write(intToStr(i + 1) + '\n')
+        for relation in matrixes[i]:
+            file.write(''.join(map(intToStr, relation)) + '\n')
     file.close()
